@@ -2,11 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Github, Linkedin, Code2, Palette, Layers, Sparkles } from "lucide-react";
+import { Mail, Github, Linkedin, Code2, Palette, Layers, Sparkles, Download, GraduationCap, Briefcase } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import project1 from "@/assets/project1.jpg";
 import project2 from "@/assets/project2.jpg";
 import project3 from "@/assets/project3.jpg";
+import profilePhoto from "@/assets/profile-photo.jpg";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const Index = () => {
   const skills = [
@@ -21,28 +23,52 @@ const Index = () => {
 
   const projects = [
     {
-      title: "Enterprise Dashboard",
-      description: "A comprehensive admin dashboard with real-time analytics, data visualization, and user management. Built with Angular and TypeScript.",
+      title: "Inspiration Computer Services",
+      description: "A comprehensive corporate website for an IT software development company offering custom software, mobile applications, and enterprise solutions. Implemented with Angular SSO authentication, fully responsive design, and SEO optimization.",
       image: project1,
-      tech: ["Angular", "TypeScript", "SCSS", "RxJS"],
-      demo: "#",
-      github: "#",
+      tech: ["Angular", "TypeScript", "SSO", "SEO", "Responsive Design"],
+      demo: "https://inspirationcs.ca/",
+      github: "https://github.com/KanchanaPragasam",
     },
     {
-      title: "E-Commerce Platform",
-      description: "Modern e-commerce solution with product catalog, shopping cart, and checkout flow. Fully responsive with smooth animations.",
+      title: "IT Training Course Platform",
+      description: "Modern training course platform for IT education with course catalog, enrollment system, and interactive learning modules. Fully responsive with smooth animations and optimized performance.",
       image: project2,
-      tech: ["Angular", "TypeScript", "Tailwind", "API Integration"],
+      tech: ["Angular", "TypeScript", "SCSS", "API Integration"],
       demo: "#",
-      github: "#",
+      github: "https://github.com/KanchanaPragasam",
     },
     {
-      title: "Creative Portfolio",
-      description: "Elegant portfolio website with interactive elements, smooth scrolling, and glass-morphism design. Optimized for performance.",
+      title: "Static Business Website",
+      description: "Professional static website with modern design, smooth scrolling, and glass-morphism effects. Deployed and hosted with complete SEO implementation for optimal search engine visibility.",
       image: project3,
-      tech: ["HTML5", "SCSS", "JavaScript", "Animations"],
+      tech: ["HTML5", "SCSS", "JavaScript", "SEO"],
       demo: "#",
-      github: "#",
+      github: "https://github.com/KanchanaPragasam",
+    },
+  ];
+
+  const education = [
+    {
+      institution: "Arignar Anna Government Arts College for Women",
+      location: "Walajapet, Ranipet",
+      degree: "Bachelor's Degree",
+      duration: "2021 - 2024",
+      grade: "8.2 CGPA",
+    },
+    {
+      institution: "Government Girls Hr. Sec. School",
+      location: "",
+      degree: "Higher Secondary (HSC)",
+      duration: "2020 - 2021",
+      grade: "93.17%",
+    },
+    {
+      institution: "Government Girls Hr. Sec. School",
+      location: "",
+      degree: "Secondary School (SSLC)",
+      duration: "2018 - 2019",
+      grade: "94%",
     },
   ];
 
@@ -57,6 +83,7 @@ const Index = () => {
           backgroundPosition: "center",
         }}
       >
+        <ParticlesBackground />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         
         <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
@@ -90,18 +117,37 @@ const Index = () => {
       <section className="py-24 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="glass-card p-12 animate-fade-in hover-lift">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text">
-              About Me
-            </h2>
+            <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
+              <img 
+                src={profilePhoto} 
+                alt="Kanchana Pragasam" 
+                className="w-48 h-48 rounded-full object-cover border-4 border-primary/30 glow-primary"
+              />
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+                  About Me
+                </h2>
+                <div className="flex gap-4">
+                  <Button 
+                    variant="hero" 
+                    size="sm"
+                    onClick={() => window.open('https://github.com/KanchanaPragasam', '_blank')}
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download Resume
+                  </Button>
+                </div>
+              </div>
+            </div>
             <div className="space-y-6 text-lg text-muted-foreground">
               <p>
-                Hi, I'm <span className="text-primary font-semibold">Kanchana</span>, a Frontend Developer specializing in building smooth, responsive, and pixel-perfect user interfaces. With a strong foundation in <span className="text-secondary">Angular</span>, <span className="text-secondary">TypeScript</span>, <span className="text-secondary">HTML5</span>, and <span className="text-secondary">SCSS</span>, I transform designs into interactive web experiences.
+                Hi, I'm <span className="text-primary font-semibold">Kanchana Pragasam</span>, a Software Engineer Trainee at <span className="text-secondary">Missionmind IT Services</span>, specializing in building smooth, responsive, and pixel-perfect user interfaces. With a strong foundation in <span className="text-secondary">Angular</span>, <span className="text-secondary">TypeScript</span>, <span className="text-secondary">HTML5</span>, and <span className="text-secondary">SCSS</span>, I transform designs into interactive web experiences.
               </p>
               <p>
-                I'm passionate about creating clean, maintainable code and implementing modern design patterns. Every project I build focuses on performance, accessibility, and user experience. I believe that great UI is the perfect blend of aesthetics and functionality.
+                I'm passionate about creating clean, maintainable code and implementing modern design patterns. I've worked on Angular SSO implementation projects, static websites with complete hosting and SEO optimization. Every project I build focuses on performance, accessibility, and user experience. I believe that great UI is the perfect blend of aesthetics and functionality.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new web technologies, contributing to open-source projects, or designing the next innovative interface.
+                Beyond coding, I'm an active volunteer at <span className="text-accent font-semibold">Gold Heart Foundation</span>, an NGO where I contribute to meaningful social causes. When I'm not coding or volunteering, you'll find me exploring new web technologies and designing the next innovative interface.
               </p>
             </div>
           </div>
@@ -133,8 +179,80 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section className="py-24 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text">
+            Professional Experience
+          </h2>
+          <div className="glass-card p-8 hover-lift">
+            <div className="flex items-start gap-6">
+              <div className="p-4 rounded-xl bg-primary/10 glow-primary">
+                <Briefcase className="w-8 h-8 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-foreground mb-2">Software Engineer Trainee</h3>
+                <p className="text-secondary font-semibold mb-2">Missionmind IT Services</p>
+                <p className="text-muted-foreground mb-4">December 2024 - Present</p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▹</span>
+                    Implemented Angular SSO (Single Sign-On) authentication for enterprise applications
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▹</span>
+                    Developed and deployed static websites with modern design patterns
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▹</span>
+                    Managed complete hosting solutions and implemented comprehensive SEO strategies
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▹</span>
+                    Collaborated with cross-functional teams to deliver high-quality web applications
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section className="py-24 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text">
+            Education
+          </h2>
+          <div className="space-y-6">
+            {education.map((edu, index) => (
+              <Card
+                key={index}
+                className="glass-card p-8 hover-lift"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start gap-6">
+                  <div className="p-4 rounded-xl bg-secondary/10 glow-secondary">
+                    <GraduationCap className="w-8 h-8 text-secondary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-foreground mb-2">{edu.institution}</h3>
+                    {edu.location && <p className="text-muted-foreground mb-1">{edu.location}</p>}
+                    <p className="text-primary font-semibold mb-2">{edu.degree}</p>
+                    <div className="flex flex-wrap gap-4 text-muted-foreground">
+                      <span>{edu.duration}</span>
+                      <span className="text-accent font-semibold">• {edu.grade}</span>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section id="projects" className="py-24 px-4">
+      <section id="projects" className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text">
             Featured Projects
@@ -172,10 +290,21 @@ const Index = () => {
                     ))}
                   </div>
                   <div className="flex gap-4 pt-4">
-                    <Button variant="glass" size="sm" className="flex-1">
+                    <Button 
+                      variant="glass" 
+                      size="sm" 
+                      className="flex-1"
+                      onClick={() => project.demo !== '#' && window.open(project.demo, '_blank')}
+                      disabled={project.demo === '#'}
+                    >
                       View Demo
                     </Button>
-                    <Button variant="outline" size="sm" className="flex-1 border-secondary/50 hover:border-secondary">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="flex-1 border-secondary/50 hover:border-secondary"
+                      onClick={() => window.open(project.github, '_blank')}
+                    >
                       <Github className="w-4 h-4 mr-2" />
                       Code
                     </Button>
@@ -242,13 +371,13 @@ const Index = () => {
             {/* Social Links */}
             <div className="flex justify-center gap-6 mt-12 pt-8 border-t border-white/10">
               <a
-                href="mailto:kanchana@example.com"
+                href="mailto:kanchanapragasam@gmail.com"
                 className="p-4 glass-card hover:border-primary/50 transition-all hover:scale-110 glow-primary"
               >
                 <Mail className="w-6 h-6 text-primary" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/kanchanapragasam"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 glass-card hover:border-secondary/50 transition-all hover:scale-110 glow-secondary"
@@ -256,7 +385,7 @@ const Index = () => {
                 <Linkedin className="w-6 h-6 text-secondary" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/KanchanaPragasam"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 glass-card hover:border-accent/50 transition-all hover:scale-110 glow-accent"
@@ -271,7 +400,8 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-white/10">
         <div className="container mx-auto text-center text-muted-foreground">
-          <p>© 2024 Kanchana. Built with React, TypeScript & Tailwind CSS</p>
+          <p>© 2024 Kanchana Pragasam. Built with React, TypeScript & Tailwind CSS</p>
+          <p className="text-sm mt-2">Active Volunteer at Gold Heart Foundation</p>
         </div>
       </footer>
     </div>
