@@ -100,7 +100,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="hero"
-              className="text-lg px-8 py-6 h-auto animate-glow-pulse"
+              className="text-lg px-8 py-6 h-auto"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View My Work
